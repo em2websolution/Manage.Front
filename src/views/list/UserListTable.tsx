@@ -214,8 +214,9 @@ const UserListTable = ({ tableData }: { tableData?: UsersType[] }) => {
                 className='is-full md:is-auto'
               />
             <FormControl size='small' className='is-full md:min-is-[160px] md:is-auto'>
-                <InputLabel>Role</InputLabel>
+                <InputLabel id='role-filter-label'>Role</InputLabel>
                 <Select
+                  labelId='role-filter-label'
                   label='Role'
                   value={roleFilter}
                   onChange={e => handleRoleChange(e.target.value)}

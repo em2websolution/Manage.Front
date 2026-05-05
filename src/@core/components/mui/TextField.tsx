@@ -259,7 +259,11 @@ const CustomTextField = forwardRef((props: TextFieldProps, ref) => {
       variant='filled'
       slotProps={{
         ...slotProps,
-        inputLabel: { ...slotProps?.inputLabel, shrink: true } as InputLabelProps
+        inputLabel: {
+          ...slotProps?.inputLabel,
+          shrink: true,
+          ...(rest.select && { htmlFor: undefined })
+        } as InputLabelProps
       }}
     />
   )

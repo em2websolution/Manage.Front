@@ -232,8 +232,9 @@ const TaskListTable = ({ tableData }: { tableData?: TaskType[] }) => {
           </div>
           <div className='flex flex-col items-start md:flex-row md:items-center gap-4'>
             <FormControl size='small' className='is-full md:min-is-[160px] md:is-auto'>
-              <InputLabel>Status</InputLabel>
+              <InputLabel id='status-filter-label'>Status</InputLabel>
               <Select
+                labelId='status-filter-label'
                 label='Status'
                 value={statusFilter}
                 onChange={e => handleStatusChange(e.target.value)}
